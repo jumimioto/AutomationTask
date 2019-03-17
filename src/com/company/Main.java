@@ -191,7 +191,7 @@ public class Main {
         int num = in.nextInt();
         boolean prime = false;
 
-        for(int i =2;i<num; i++)
+        for(int i =3;i<num; i++)
         {
             if(num%i==0) {
                 System.out.println("Given number is prime ");
@@ -199,7 +199,8 @@ public class Main {
             }
         }
         if (!prime)
-        {System.out.print("Given number is not prime ");}
+        {System.out.println("Given number is not prime ");
+        }
     }
 
 }
