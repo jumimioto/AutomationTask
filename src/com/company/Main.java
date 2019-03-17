@@ -51,7 +51,11 @@ public class Main {
 
 
     }
-
+//Calculate sum of digits of integer (ex. in case of 123, sum of digits = 6). Write to console different messages based on results
+//
+//            a. sum can be divided by 2 and 5 without remainder
+//
+//            b. sum can be divided by 3 or 10 without remainder
     private void ex1() {
 
         System.out.println("Write an int:");
@@ -71,7 +75,7 @@ public class Main {
         System.out.println("The sum of digits is: " + sum);
 
     }
-
+// Print to console whether integer is odd or even. Use ternary operator ("short if")
     private void ex2() {
         System.out.println("Write an int:");
         Scanner in = new Scanner(System.in);
@@ -79,7 +83,7 @@ public class Main {
         String Asnwer = (num % 2 == 0) ? "The int is even" : "The int is odd";
         System.out.println(Asnwer);
     }
-
+// Iterate from 1 to given number and print even only numbers.
     private void ex3() {
         System.out.println("Write an int:");
         Scanner in = new Scanner(System.in);
@@ -94,6 +98,7 @@ public class Main {
 
 
     }
+//    Calculate the average of three numbers.
     private void ex4()
     {
         Scanner in = new Scanner(System.in);
@@ -105,6 +110,8 @@ public class Main {
         System.out.println("The average of those 3 numbers is: "+avg);
 
     }
+//    Calculate sum of odd numbers from given range. Method should have
+//    2 parameters - first and last numbers from range. Use "while" cycle
     private void ex5()
     {
         Scanner in = new Scanner(System.in);
@@ -122,25 +129,50 @@ public class Main {
         }
         System.out.println("The sum of odd numbers is: "+sum);
     }
+//    Print to console name of day based on given number. Use switch statement
+    private void ex6()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Introduce number that you want to be converted in day ");
+        int Day = in.nextInt();
+        switch (Day){
+            case 1:System.out.print("Monday");
+                break;
+            case 2:System.out.print("Tuesday");
+                break;
+            case 3:System.out.print("Wednesday");
+                break;
+            case 4:System.out.print("Thursday");
+                break;
+            case 5:System.out.print("Friday");
+                break;
+            case 6:System.out.print("Saturday");
+                break;
+            case 7:System.out.print("Sunday");
+                break;
+        }
+    }
+//    Method that prints matrix based on given size.
     private void ex7()
     {
         Scanner in = new Scanner(System.in);
         System.out.println("Write the parameters of matrix");
         int Width = in.nextInt();
         System.out.println("X");
-        int  Hight = in.nextInt();
+        int  Height  = in.nextInt();
         for(int W =1;W<Width; W++)
         {
             System.out.print("1");
-           if(W == Width-1 && Hight>1 )
+           if(W == Width-1 && Height>1 )
            {
                System.out.println("1");
                W = 0;
-               Hight--;
+               Height--;
            }
            else {System.out.print("1");}
         }
     }
+//     Print to console factorial of number 10
     private void ex8 ()
     {
         int num =10;
@@ -151,6 +183,7 @@ public class Main {
         }
         System.out.print("Factorial number of 10 is: "+factorial);
     }
+//    Calculate if given number is a prime number
     private void ex9 ()
     {
         Scanner in = new Scanner(System.in);
@@ -168,27 +201,5 @@ public class Main {
         if (!prime)
         {System.out.print("Given number is not prime ");}
     }
-    private void ex6()
-    {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Introduce number that you want to be converted in day ");
-        int Day = in.nextInt();
-        switch (Day){
-            case 1:System.out.print("Monday");
-            break;
-            case 2:System.out.print("Tuesday");
-                break;
-            case 3:System.out.print("Wednesday");
-                break;
-            case 4:System.out.print("Thursday");
-                break;
-            case 5:System.out.print("Friday");
-                break;
-            case 6:System.out.print("Saturday");
-                break;
-            case 7:System.out.print("Sunday");
-                break;
-        }
 
-    }
 }
