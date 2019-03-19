@@ -200,6 +200,9 @@ public class Main {
             case 7:
                 dayName = "Sunday";
                 break;
+            default:
+                break;
+
         }
         System.out.println(dayName);
     }
